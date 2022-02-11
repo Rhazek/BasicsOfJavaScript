@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TestaVelocidade</title>
+    <style>
+        body{
+            background-color: rgb(3, 54, 39);
+            color: aliceblue;
+            text-align: center;
+        }
+        input#velo{
+            width: 50px;
+        }
+        CONSULTAR{
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px; 
+        }
+    </style>
+</head>
+<body>
+    <h1>SISTEMA DE MULTAS</h1>
+    Velocidade do carro:<input type="number" name="velo" id="velo">Km/h
+    <br><br><input type="button" value="CONSULTAR" onclick="consultarVel()">
+    <div id="res"></div>
+    <script>
+        function consultarVel(){
+        var vel = window.document.getElementById('velo')
+        var res = window.document.getElementById('res')
+        var veloc = Number(vel.value)
+        res.innerHTML = `<p>Sua velocidade atual é de <strong>${veloc}km/h</strong></p>`
+        res.innerHTML += `Digija sempre com cinto de segurança`
+        if(veloc>60){
+            res.innerHTML += "<p>Você ultrapassou a velocidade mínima permitida. MULTADO!</p>"
+        }else{
+            res.innerHTML += "<p>Você está dentro da velocidade permitida</p>"
+        }
+} 
+        </script>      
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(11, 107, 48);
+            margin-left: 200px;
+        }
+        h1{
+            background-color: aliceblue;
+            width: 290px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            border-radius: 10px;
+        }
+        div#res{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <h1>QUE DIA É HOJE?</h1>
+    <div id="res"></div>
+    <script>
+        var agora = new Date()
+        var diaSem = agora.getDay()
+        switch (diaSem) {
+    case 0:
+        res.innerText = "Domingo"
+        break
+    case 1:
+        res.innerText = "Segunda"
+        break
+    case 2:
+        res.innerText = "Terça"
+        break
+    case 3:
+        res.innerText = "Quarta"
+        break
+    case 4:
+        res.innerText = "Quinta"
+        break
+    case 5:
+        res.innerText = "Sexta"
+        break
+    case 6:
+        res.innerText = "Sábado"
+        break
+    default:
+        res.innerText = "[ERRO] Dia inválido!"
+    break
+}
+    </script>
+</body>
+</html>

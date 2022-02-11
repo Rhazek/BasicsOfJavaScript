@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verifica Nacionalidade</title>
+    <style>
+        body{
+            background-color: darkred;
+            color: rgb(0, 0, 0);
+            font: normal 10pt times;
+            text-align: center;
+        }
+        div#box{
+            background-color: rgb(238, 145, 23);
+            width: 500px;
+            height: 130px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+    <h1>SISTEMA DE VERIFICAÇÃO DE NACIONALIDADE</h1>
+    País de nascimento <input type="text" name="nac" id="nac">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res"></div>
+    <script>
+        function verificar(){
+        var naci = window.document.getElementById('nac')
+        var res =  window.document.getElementById('res')
+        var nacio = (naci.value)
+        if(nacio=='Brasil'){
+        res.innerHTML = "Você é brasileiro!"
+        }else{ if(nacio=='EUA'){
+            res.innerHTML = "Você é americano!"
+        }else { if(nacio==''){
+            res.innerHTML = "Vc não digitou o país."
+        }else{
+        res.innerHTML = "Você é estrangeiro!"
+        }
+    }
+    }
+}
+    </script>
+    </div>
+</body>
+</html>

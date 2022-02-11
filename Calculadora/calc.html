@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULADORA</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>CALCULADORA</h1>
+    </header> 
+    <section>
+        <h2>Escolha sua OPERAÇÃO</h2>
+        <div id="calculos">
+            <p>
+            <input type="radio" name="oper" id="somar" checked>
+            <label for="som">Somar(+)</label>
+            <input type="radio" name="oper" id="subtrair">
+            <label for="sub">Subtrair(-)</label>
+            <input type="radio" name="oper" id="multiplicar">
+            <label for="mul">Multiplicar(x)</label>
+            <input type="radio" name="oper" id="dividir">
+            <label for="div">Dividir(:)</label>
+            </p>
+            <p><input type="number" name="Num1" id="txtn1">
+                <input type="number" name="Num2" id="txtn2">
+            </p>
+            <p><input type="button" value="Calcular" onclick="calcular()"></p>
+        </div>
+        <div id="res">
+            Resultado
+        </div>
+    </section>
+    <footer>
+        <p>&copy; CursoEmVideo</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
